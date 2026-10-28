@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">桌面浏览器，优先用系统代理绕过</title><desc id="desc">先确认已有校园网络访问条件；校外仍按学校要求使用 WebVPN 等入口。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#8FA4B6" stroke-width="2"/></marker></defs>
+<rect width="1440" height="900" fill="#F3F6FA"/>
+<g font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif">
+<text x="56" y="66" font-size="22" fill="#2563EB" font-weight="700" font-family="inherit">BJUT  /  校园网访问指南</text>
+<text x="56" y="122" font-size="38" fill="#172B3A" font-weight="700" font-family="inherit">桌面浏览器，优先用系统代理绕过</text>
+<text x="56" y="166" font-size="23" fill="#526878" font-weight="400" font-family="inherit">先确认已有校园网络访问条件；校外仍按学校要求使用 WebVPN 等入口。</text>
+<rect x="56" y="205" width="1328" height="93" rx="22" fill="#E8F1FF"/>
+<text x="84" y="243" font-size="24" fill="#2563EB" font-weight="700" font-family="inherit">先看你的接管方式</text>
+<text x="84" y="278" font-size="25" fill="#172B3A" font-weight="400" font-family="inherit">桌面端 + 应用遵循系统代理 + 非 PAC + 不需要 TUN → 先用左侧方案</text>
+<rect x="56" y="329" width="641" height="377" rx="22" fill="white" stroke="#B6DDD4" stroke-width="2"/>
+<rect x="84" y="355" width="128" height="38" rx="19" fill="#DCF2E9"/>
+<text x="100" y="382" font-size="20" fill="#087F70" font-weight="700" font-family="inherit">首选方案</text>
+<text x="84" y="438" font-size="34" fill="#087F70" font-weight="700" font-family="inherit">系统代理绕过</text>
+<text x="84" y="490" font-size="24" fill="#526878" font-weight="400" font-family="inherit">在“代理绕过 / 排除域名”里追加校园域名</text>
+<text x="84" y="533" font-size="24" fill="#526878" font-weight="400" font-family="inherit">保留现有列表，保存后重新打开校园网页</text>
+<text x="84" y="576" font-size="24" fill="#526878" font-weight="400" font-family="inherit">无须编辑订阅，也无须新增内核规则</text>
+<rect x="84" y="619" width="585" height="57" rx="10" fill="#F1F7F5"/>
+<text x="104" y="655" font-size="25" fill="#087F70" font-weight="700" font-family="inherit">校园请求 → 本地网络 → 校园资源</text>
+<rect x="727" y="329" width="657" height="377" rx="22" fill="white" stroke="#CED7E5" stroke-width="2"/>
+<rect x="755" y="355" width="190" height="38" rx="19" fill="#EDF1F7"/>
+<text x="771" y="382" font-size="20" fill="#456077" font-weight="700" font-family="inherit">需要时使用</text>
+<text x="755" y="438" font-size="32" fill="#172B3A" font-weight="700" font-family="inherit">规则分流 → DIRECT</text>
+<text x="755" y="490" font-size="24" fill="#526878" font-weight="400" font-family="inherit">已经需要 TUN / Android VPN 接管</text>
+<text x="755" y="533" font-size="24" fill="#526878" font-weight="400" font-family="inherit">或者应用自行指定本地代理</text>
+<text x="755" y="576" font-size="24" fill="#526878" font-weight="400" font-family="inherit">保留原有接管方式，添加校园直连规则</text>
+<rect x="755" y="619" width="601" height="57" rx="10" fill="#F0F4FA"/>
+<text x="775" y="655" font-size="23" fill="#2563EB" font-weight="700" font-family="inherit">校园请求 → Clash → DIRECT → 校园资源</text>
+<rect x="56" y="739" width="1328" height="83" rx="22" fill="#FFF4E6"/>
+<text x="82" y="774" font-size="25" fill="#B55C18" font-weight="700" font-family="inherit">两种方法都能让校园请求直连，作用位置不同。</text>
+<text x="82" y="807" font-size="23" fill="#B55C18" font-weight="400" font-family="inherit">TUN 仍接管时，单加系统代理绕过不能保证校园请求也绕开 TUN。</text>
+<text x="56" y="863" font-size="20" fill="#526878" font-weight="400" font-family="inherit">操作示意图 · 非软件截图 · 不含任何订阅、账号或实际连接信息</text>
+</g></svg>

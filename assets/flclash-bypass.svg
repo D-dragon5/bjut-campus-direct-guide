@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1040" viewBox="0 0 1440 1040" role="img" aria-labelledby="title desc">
+<title id="title">FlClash 桌面端：用“排除域名”</title><desc id="desc">按 v0.9.2 源码核对 · 系统代理开启、TUN 关闭，应用遵循系统代理</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#8FA4B6" stroke-width="2"/></marker></defs>
+<rect width="1440" height="1040" fill="#F3F6FA"/>
+<g font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif">
+<text x="56" y="66" font-size="22" fill="#2563EB" font-weight="700" font-family="inherit">BJUT  /  校园网访问指南</text>
+<text x="56" y="122" font-size="38" fill="#172B3A" font-weight="700" font-family="inherit">FlClash 桌面端：用“排除域名”</text>
+<text x="56" y="166" font-size="23" fill="#526878" font-weight="400" font-family="inherit">按 v0.9.2 源码核对 · 系统代理开启、TUN 关闭，应用遵循系统代理</text>
+<rect x="56" y="204" width="1328" height="69" rx="22" fill="#E8F1FF"/>
+<text x="82" y="248" font-size="26" fill="#2563EB" font-weight="700" font-family="inherit">工具  →  进阶配置  →  网络  →  系统  →  排除域名</text>
+<rect x="56" y="303" width="449" height="574" rx="22" fill="white"/>
+<circle cx="99" cy="349" r="23" fill="#2563EB"/>
+<text x="91" y="358" font-size="25" fill="white" font-weight="700" font-family="inherit">1</text>
+<text x="139" y="359" font-size="27" fill="#172B3A" font-weight="700" font-family="inherit">保留现有域名列表</text>
+<text x="84" y="409" font-size="23" fill="#526878" font-weight="400" font-family="inherit">进入“排除域名”后点击 ＋</text>
+<text x="84" y="451" font-size="23" fill="#526878" font-weight="400" font-family="inherit">可以逐条添加，也可以批量添加</text>
+<circle cx="99" cy="524" r="23" fill="#2563EB"/>
+<text x="91" y="533" font-size="25" fill="white" font-weight="700" font-family="inherit">2</text>
+<text x="139" y="534" font-size="27" fill="#172B3A" font-weight="700" font-family="inherit">批量添加时每行一项</text>
+<text x="84" y="584" font-size="23" fill="#526878" font-weight="400" font-family="inherit">两行校园域名即可</text>
+<text x="84" y="626" font-size="23" fill="#526878" font-weight="400" font-family="inherit">使用换行或逗号分隔</text>
+<text x="84" y="668" font-size="23" fill="#526878" font-weight="400" font-family="inherit">不粘贴 Clash Verge 的分号列表</text>
+<circle cx="99" cy="742" r="23" fill="#2563EB"/>
+<text x="91" y="751" font-size="25" fill="white" font-weight="700" font-family="inherit">3</text>
+<text x="139" y="752" font-size="27" fill="#172B3A" font-weight="700" font-family="inherit">确认后再保存列表</text>
+<text x="84" y="802" font-size="23" fill="#526878" font-weight="400" font-family="inherit">添加弹窗点“确定”</text>
+<text x="84" y="844" font-size="23" fill="#526878" font-weight="400" font-family="inherit">回到列表页，再点勾号“保存”</text>
+<rect x="535" y="303" width="849" height="574" rx="22" fill="white" stroke="#D5DDE7" stroke-width="2"/>
+<text x="570" y="353" font-size="29" fill="#172B3A" font-weight="700" font-family="inherit">排除域名</text>
+<rect x="1109" y="326" width="238" height="38" rx="19" fill="#F0F3F8"/>
+<text x="1125" y="353" font-size="20" fill="#526878" font-weight="700" font-family="inherit">关键字段操作示意</text>
+<rect x="570" y="386" width="779" height="316" rx="14" fill="#F7FAFD" stroke="#B7C8DD" stroke-width="2"/>
+<text x="595" y="429" font-size="25" fill="#172B3A" font-weight="700" font-family="inherit">批量添加</text>
+<rect x="594" y="450" width="731" height="158" rx="12" fill="white" stroke="#BCD2C8" stroke-width="2"/>
+<text x="620" y="502" font-size="30" fill="#087F70" font-weight="700" font-family="Consolas, monospace">bjut.edu.cn</text>
+<text x="620" y="551" font-size="30" fill="#087F70" font-weight="700" font-family="Consolas, monospace">*.bjut.edu.cn</text>
+<text x="595" y="645" font-size="24" fill="#B55C18" font-weight="700" font-family="inherit">换行或逗号分隔；不要使用分号</text>
+<rect x="1190" y="650" width="135" height="41" rx="9" fill="#2563EB"/>
+<text x="1233" y="679" font-size="22" fill="white" font-weight="700" font-family="inherit">确定</text>
+<path d="M955 715 L955 757" stroke="#8FA4B6" fill="none" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="570" y="775" width="779" height="69" rx="12" fill="#DFF2EA"/>
+<text x="596" y="819" font-size="25" fill="#087F70" font-weight="700" font-family="inherit">回到排除域名列表  →  点击勾号“保存”</text>
+<rect x="56" y="907" width="1328" height="63" rx="12" fill="#FFF4E6"/>
+<text x="82" y="947" font-size="23" fill="#B55C18" font-weight="400" font-family="inherit">Android 或必须使用 TUN：转到附加规则，添加 DOMAIN-SUFFIX / bjut.edu.cn / DIRECT。</text>
+<text x="56" y="1009" font-size="20" fill="#526878" font-weight="400" font-family="inherit">操作示意图 · 非软件截图 · 不含任何订阅、账号或实际连接信息</text>
+</g></svg>

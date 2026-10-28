@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1120" viewBox="0 0 1440 1120" role="img" aria-labelledby="title desc">
+<title id="title">Clash Verge：系统代理绕过怎么填</title><desc id="desc">Windows 普通系统代理模式示例 · 保留原内容，在末尾追加 BJUT 域名</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#8FA4B6" stroke-width="2"/></marker></defs>
+<rect width="1440" height="1120" fill="#F3F6FA"/>
+<g font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif">
+<text x="56" y="66" font-size="22" fill="#2563EB" font-weight="700" font-family="inherit">BJUT  /  校园网访问指南</text>
+<text x="56" y="122" font-size="38" fill="#172B3A" font-weight="700" font-family="inherit">Clash Verge：系统代理绕过怎么填</text>
+<text x="56" y="166" font-size="23" fill="#526878" font-weight="400" font-family="inherit">Windows 普通系统代理模式示例 · 保留原内容，在末尾追加 BJUT 域名</text>
+<rect x="56" y="204" width="1328" height="69" rx="22" fill="#E8F1FF"/>
+<text x="82" y="248" font-size="27" fill="#2563EB" font-weight="700" font-family="inherit">设置  →  系统代理旁的设置按钮  →  系统代理设置</text>
+<rect x="56" y="303" width="455" height="680" rx="22" fill="white"/>
+<circle cx="99" cy="349" r="23" fill="#2563EB"/>
+<text x="91" y="358" font-size="25" fill="white" font-weight="700" font-family="inherit">1</text>
+<text x="139" y="359" font-size="27" fill="#172B3A" font-weight="700" font-family="inherit">确认使用条件</text>
+<text x="84" y="410" font-size="25" fill="#526878" font-weight="400" font-family="inherit">系统代理：开启</text>
+<text x="84" y="453" font-size="25" fill="#526878" font-weight="400" font-family="inherit">TUN：关闭</text>
+<text x="84" y="496" font-size="25" fill="#526878" font-weight="400" font-family="inherit">PAC 模式：关闭</text>
+<text x="84" y="539" font-size="25" fill="#526878" font-weight="400" font-family="inherit">浏览器：使用系统代理</text>
+<circle cx="99" cy="624" r="23" fill="#2563EB"/>
+<text x="91" y="633" font-size="25" fill="white" font-weight="700" font-family="inherit">2</text>
+<text x="139" y="634" font-size="27" fill="#172B3A" font-weight="700" font-family="inherit">关闭默认绕过开关</text>
+<text x="84" y="684" font-size="24" fill="#526878" font-weight="400" font-family="inherit">关闭“始终使用默认绕过”</text>
+<text x="84" y="724" font-size="24" fill="#526878" font-weight="400" font-family="inherit">保留现有列表及局域网条目</text>
+<circle cx="99" cy="805" r="23" fill="#2563EB"/>
+<text x="91" y="814" font-size="25" fill="white" font-weight="700" font-family="inherit">3</text>
+<text x="139" y="815" font-size="27" fill="#172B3A" font-weight="700" font-family="inherit">追加并保存</text>
+<text x="84" y="865" font-size="23" fill="#526878" font-weight="400" font-family="inherit">只加校园主机名匹配项</text>
+<text x="84" y="905" font-size="23" fill="#526878" font-weight="400" font-family="inherit">保存后重新打开校园网页</text>
+<text x="84" y="945" font-size="23" fill="#526878" font-weight="400" font-family="inherit">不填 https://、路径或 DIRECT</text>
+<rect x="542" y="303" width="842" height="680" rx="22" fill="#FFFFFF" stroke="#D5DDE7" stroke-width="2"/>
+<text x="577" y="353" font-size="29" fill="#172B3A" font-weight="700" font-family="inherit">系统代理设置</text>
+<rect x="1114" y="325" width="234" height="38" rx="19" fill="#F0F3F8"/>
+<text x="1130" y="352" font-size="20" fill="#526878" font-weight="700" font-family="inherit">关键字段操作示意</text>
+<rect x="576" y="385" width="774" height="116" rx="12" fill="#F6F8FB"/>
+<text x="598" y="427" font-size="25" fill="#172B3A" font-weight="400" font-family="inherit">使用 PAC 模式</text>
+<rect x="1249" y="405" width="68" height="34" rx="17" fill="#D5DCE5"/>
+<circle cx="1267" cy="422" r="13" fill="white"/>
+<text x="598" y="472" font-size="25" fill="#172B3A" font-weight="400" font-family="inherit">始终使用默认绕过</text>
+<rect x="1249" y="450" width="68" height="34" rx="17" fill="#D5DCE5"/>
+<circle cx="1267" cy="467" r="13" fill="white"/>
+<text x="578" y="550" font-size="25" fill="#172B3A" font-weight="700" font-family="inherit">代理绕过</text>
+<rect x="576" y="569" width="774" height="176" rx="12" fill="#F7FAFD" stroke="#B7C8DD" stroke-width="2"/>
+<text x="600" y="611" font-size="24" fill="#526878" font-weight="400" font-family="inherit">原有全部条目（继续保留）</text>
+<rect x="592" y="637" width="742" height="84" rx="10" fill="#DFF2EA"/>
+<text x="608" y="674" font-size="29" fill="#087F70" font-weight="700" font-family="Consolas, monospace">;bjut.edu.cn;*.bjut.edu.cn</text>
+<text x="608" y="706" font-size="21" fill="#087F70" font-weight="400" font-family="inherit">↑ 追加在原列表末尾，包括开头的半角分号</text>
+<text x="577" y="784" font-size="23" fill="#526878" font-weight="400" font-family="inherit">已用逐项编辑？分别新增这两个条目：</text>
+<rect x="577" y="806" width="226" height="38" rx="19" fill="#EEF3FB"/>
+<text x="593" y="833" font-size="20" fill="#2563EB" font-weight="700" font-family="inherit">bjut.edu.cn</text>
+<rect x="820" y="806" width="265" height="38" rx="19" fill="#EEF3FB"/>
+<text x="836" y="833" font-size="20" fill="#2563EB" font-weight="700" font-family="inherit">*.bjut.edu.cn</text>
+<text x="577" y="892" font-size="22" fill="#526878" font-weight="400" font-family="inherit">空列表不加开头分号；已有结尾分号不重复添加。</text>
+<rect x="1204" y="918" width="146" height="48" rx="10" fill="#2563EB"/>
+<text x="1250" y="951" font-size="24" fill="white" font-weight="700" font-family="inherit">保存</text>
+<rect x="56" y="1005" width="1328" height="51" rx="12" fill="#FFF4E6"/>
+<text x="81" y="1038" font-size="23" fill="#B55C18" font-weight="400" font-family="inherit">需要 TUN 时使用规则法；无需为本教程关闭其他应用依赖的接管方式。</text>
+<text x="56" y="1090" font-size="20" fill="#526878" font-weight="400" font-family="inherit">操作示意图 · 非软件截图 · 不含任何订阅、账号或实际连接信息</text>
+</g></svg>

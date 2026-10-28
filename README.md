@@ -2,17 +2,22 @@
 
 **以北京工业大学（BJUT）为例：让校园流量走本地网络，其他流量继续按原来的代理规则处理。**
 
+> **桌面端首选：系统代理绕过。** 浏览器/应用遵循系统代理，且不需要 TUN 接管时，把校园域名加入“代理绕过 / 排除域名”即可。已经需要 TUN、Android VPN 或应用手动代理时，保留原接管方式，使用规则分流。
+
 适用：Clash Verge Rev、FlClash，以及使用 Clash / Mihomo 规则的客户端。本文整理现成官方资料，补充 BJUT 案例；原教程见[资料索引](docs/references.md)。整理日期：2026-10-28。
 
 ## 先选你的情况
 
 | 你的情况 | 从这里开始 |
 |---|---|
-| Windows + Clash Verge Rev，使用系统代理，TUN 关闭 | [方法一：在代理绕过末尾加校园域名](#方法一clash-verge-rev--windows-系统代理) |
-| Clash Verge Rev 开启了 TUN，或想统一按规则处理 | [方法二：校园域名设为 DIRECT](#方法二clash-verge-rev--规则分流含-tun) |
-| FlClash 桌面端或 Android | [FlClash：添加校园直连规则](docs/flclash.md) |
-| 其他 Clash / Mihomo 客户端、手动 YAML 配置 | [通用规则及其他客户端](docs/common-rules.md) |
+| **首选：Windows + Clash Verge Rev，应用遵循系统代理且不需要 TUN** | [方法一：在系统代理绕过中加校园域名](#方法一clash-verge-rev--windows-系统代理) |
+| FlClash 桌面端，使用系统代理且 TUN 关闭 | 优先添加系统代理排除域名，见 [FlClash 操作页](docs/flclash.md) |
+| Clash Verge Rev 使用 TUN，或应用手动指向本地代理 | [方法二：用规则将校园域名设为 DIRECT](#方法二clash-verge-rev--规则分流含-tun) |
+| FlClash Android，或桌面端使用 TUN | [FlClash：添加校园直连规则](docs/flclash.md) |
+| 其他桌面客户端 / Clash、Mihomo 配置 | 遵循系统代理时先找“绕过 / 例外”；否则看[通用规则](docs/common-rules.md) |
 | 规则加了仍然打不开 | [排查表](docs/troubleshooting.md) |
+
+![选择访问方式](assets/choose-mode.png)
 
 ## 访问内网的前提
 
@@ -30,7 +35,7 @@
 
 ## 方法一：Clash Verge Rev + Windows 系统代理
 
-适用条件：**系统代理已开启、TUN 关闭、系统代理使用默认模式（非 PAC）**。浏览器还应使用系统代理，未单独指定其他代理。
+这是桌面浏览器和遵循系统代理的应用的首选做法。适用条件：**系统代理已开启、TUN 关闭、系统代理使用默认模式（非 PAC）**，浏览器/应用使用系统代理设置。已经需要 TUN 的用户直接用方法二。
 
 1. 打开 Clash Verge Rev → **设置 → 系统代理的设置按钮**，进入“系统代理设置”。不同版本可显示为齿轮或设置图标。
 2. 先复制保存现有“代理绕过”内容，便于恢复。
@@ -44,9 +49,11 @@
 5. 点击 **保存**。若界面是逐项编辑，就分别新增 `bjut.edu.cn` 和 `*.bjut.edu.cn` 两项，不输入分号。
 6. 关闭校园网页的旧标签页，重新打开门户。仍沿用旧连接时，重启浏览器再试。
 
+![系统代理绕过操作示意](assets/system-proxy-bypass.png)
+
 已有条目以分号结尾时，不重复加分号；完全空白的文本框填 `bjut.edu.cn;*.bjut.edu.cn`。不要把示例当成整份绕过列表替换进去，以免丢掉已有局域网条目。
 
-这里填写**主机名或匹配项**，不填写 `https://`、路径、`DIRECT` 或 YAML。Windows 使用半角分号；macOS / Linux 不应直接照搬这段分隔符，优先使用下面的规则分流方法。
+这里填写**主机名或匹配项**，不填写 `https://`、路径、`DIRECT` 或 YAML。Windows 文本使用半角分号；其他桌面系统按其“忽略主机 / 代理例外”界面添加，分隔符和匹配格式以该界面为准。
 
 系统代理绕过是客户端的应用设置，独立于订阅内容；正常更新订阅不会改写这项设置。导入备份、重置客户端或其他软件接管系统代理时，需重新检查。
 
@@ -54,7 +61,7 @@
 
 ## 方法二：Clash Verge Rev + 规则分流（含 TUN）
 
-这种方法让请求进入 Clash 后，由规则选择 **DIRECT（直连）**。对已被 TUN 接管的请求，也可以用相同的校园域名规则分流。
+适用于已经使用 TUN、应用手动指定本地代理等情况。保持原有接管方式，让进入 Clash 的校园请求由规则选择 **DIRECT（直连）**。
 
 1. 把客户端的出站模式设为 **规则 / Rule**。
 2. 打开 **订阅**，右键当前正在使用的订阅卡片 → **编辑规则**。
@@ -83,7 +90,11 @@
 
 ## FlClash 怎么做？
 
-当前 **v0.9.2** 可通过 **工具 → 进阶配置 → 附加规则** 新增 `DOMAIN-SUFFIX / bjut.edu.cn / DIRECT`，并使用规则出站模式。还需确认当前订阅采用会加载全局附加规则的标准扩展方式。
+桌面端使用系统代理且 TUN 关闭时，优先到 **工具 → 进阶配置 → 网络 → 系统 → 排除域名**，保留原列表，新增 `bjut.edu.cn` 和 `*.bjut.edu.cn`。FlClash 批量添加用换行或逗号，不用分号。
+
+Android 或桌面端 TUN 使用规则分流：当前 **v0.9.2** 可通过 **工具 → 进阶配置 → 附加规则** 新增 `DOMAIN-SUFFIX / bjut.edu.cn / DIRECT`，并检查当前订阅是否加载全局附加规则。
+
+![FlClash 桌面绕过示意](assets/flclash-bypass.png)
 
 具体保存、订阅检查及版本依据见 [FlClash 操作页](docs/flclash.md)。较早教程中的“覆写”菜单与新版本有变化，按对应版本阅读。
 
@@ -91,7 +102,7 @@
 
 | 项目 | 它控制什么 | 本例怎么填 |
 |---|---|---|
-| 系统代理绕过 | 遵循系统代理的应用是否把请求交给代理 | Windows 文本项：`bjut.edu.cn;*.bjut.edu.cn` |
+| 系统代理绕过 | 遵循系统代理的应用是否把请求交给代理 | Clash Verge / Windows 文本项：`bjut.edu.cn;*.bjut.edu.cn` |
 | 内核规则分流 | 已进入 Clash 的请求选择哪个出口 | `DOMAIN-SUFFIX,bjut.edu.cn,DIRECT` |
 | TUN 流量排除 | 指定网段是否被 TUN 路由接管 | 属于另一个设置；只在明确需要排除已知网段时配置 |
 
@@ -110,7 +121,7 @@ HTTP `200` 只表示某次请求收到了成功响应，不能单独证明已经
 
 ## 可以直接分享的话
 
-> 开着 Clash 时校园网打不开，可以把校园域名设为直连。BJUT 的例子：Clash Verge 在 Windows 系统代理绕过里保留原内容，再追加 `;bjut.edu.cn;*.bjut.edu.cn`；开启 TUN 或使用 FlClash 时，用规则模式添加 `DOMAIN-SUFFIX,bjut.edu.cn,DIRECT`。校外访问内网仍需学校 WebVPN 等授权入口。完整步骤见本仓库。
+> 开着 Clash 时校园网打不开，桌面浏览器优先使用系统代理绕过。BJUT 的例子：Clash Verge 保持系统代理开启、TUN 关闭，在 Windows 系统代理绕过里保留原内容，再追加 `;bjut.edu.cn;*.bjut.edu.cn`。使用 TUN、Android 或手动代理时，用规则模式添加 `DOMAIN-SUFFIX,bjut.edu.cn,DIRECT`。校外访问内网仍需学校 WebVPN 等授权入口。完整步骤见本仓库。
 
 ## 资料、示例与验证范围
 
@@ -119,6 +130,6 @@ HTTP `200` 只表示某次请求收到了成功响应，不能单独证明已经
 - [打不开时的排查表及恢复方法](docs/troubleshooting.md)
 - [校园规则片段](examples/campus-rules.yaml) / [Windows 绕过追加片段](examples/verge-bypass-windows.txt)
 
-本文核对了公开校方说明、客户端文档及标注版本的源码；示例文件做了语法和匹配范围检查。未在所有客户端、手机和校园网络环境中逐一实机测试，也未执行校园业务登录。具体界面和网络效果应按上面的步骤在自己的环境验证。
+配图是根据操作步骤绘制的示意图，PNG 用于直接阅读，同目录 SVG 保留为可编辑源图。本文核对了公开校方说明、客户端文档及标注版本的源码；示例文件做了语法和匹配范围检查。未在所有客户端、手机和校园网络环境中逐一实机测试，也未执行校园业务登录。具体界面和网络效果应按上面的步骤在自己的环境验证。
 
 本仓库为个人整理的交流教程。原创文字和示例按 [MIT License](LICENSE) 提供；链接到的教程、软件及校方资料仍遵循其各自条款。
