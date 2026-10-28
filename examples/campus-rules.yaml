@@ -1,0 +1,5 @@
+# BJUT 校园直连：仅为配置片段，不是完整订阅。
+# 添加到现有 rules 列表前部；保留其他规则和最终 MATCH。
+# 可视化规则编辑器中只填 DOMAIN-SUFFIX / bjut.edu.cn / DIRECT。
+rules:
+  - DOMAIN-SUFFIX,bjut.edu.cn,DIRECT
